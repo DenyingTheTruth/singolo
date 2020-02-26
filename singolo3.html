@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./fonts.css" />
+    <link rel="stylesheet" href="./singolo3.css" />
+  </head>
+  <body>
+    <section class="get-a-quote">
+      <div class="get-a-quote-container">
+        <h2>Get a Quote</h2>
+        <p>
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+          Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
+          lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
+          tortor mauris condimentum nibh.
+        </p>
+        <div class="form-container">
+          <form method="POST" action="">
+            <input
+              type="text"
+              id="first_name_field"
+              maxlength="32"
+              name="first_name"
+              pattern="[A-Za-z]{1,32}"
+              placeholder="Name (Required)"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email_field"
+              placeholder="Email (Required)"
+              required
+            />
+            <input
+              type="text"
+              name="subject"
+              id="subject_field"
+              placeholder="Subject"
+            />
+            <textarea
+              name="description"
+              id="description_field"
+              rows="10"
+              cols="30"
+              placeholder="Describe your project in detail..."
+            ></textarea>
+            <button type="submit" value="">Submit</button>
+          </form>
+          <div class="contact-container">
+            <h3>Contact Information</h3>
+            <p>
+              Quisque
+              <span>
+                hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra&shy;
+                nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat
+                libero. Nulla sed nunc et tortor luctus faucibus. Morbi at
+                aliquet </span
+              >turpis, et consequat felis.
+            </p>
+            <div class="contact-links-container">
+              <a href="#!">
+                <img src="./assets/images/location.png" alt=" Location" />
+                <span>Elm St. 14/05 Lost City</span>
+              </a>
+              <a href="tel:03528 331 86 35">
+                <img
+                  src="./assets/images/contact-phone.png"
+                  alt="Phone number"
+                />
+                <span>03528 331 86 35</span>
+              </a>
+              <a href="mailto:info@singolo.com">
+                <img src="./assets/images/mail.png" alt="Email" />
+                <span>info@singolo.com</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <span>© Copyright 2013</span>
+        <div class="social-links social-links-fix">
+          <a href="#!">
+            <img src="./assets/images/facebook.png" alt="Facebook" />
+          </a>
+          <a href="#!">
+            <img src="./assets/images/google+.png" alt="Google+" />
+          </a>
+          <a href="#!">
+            <img src="./assets/images/twitter.png" alt="Twitter" />
+          </a>
+          <a href="#!">
+            <img src="./assets/images/linkedin.png" alt="Linked In" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
