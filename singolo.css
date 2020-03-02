@@ -44,9 +44,10 @@ header {
 
 header h1 {
   display: flex;
-  font-size: 25px;
-  margin-left: -2px;
-  margin-top: -3px;
+  font-size: 26px;
+  letter-spacing: -1px;
+  /* margin-left: -2px; */
+  margin-top: -1px;
 }
 
 header h1 span:last-child {
@@ -63,7 +64,7 @@ header nav ul {
   align-items: center;
   font-size: 12px;
   list-style-type: none;
-  padding-top: 8px;
+  padding-top: 9px;
   padding-left: 1px;
 }
 
@@ -189,11 +190,12 @@ header nav ul li a:hover {
   font-family: "Lato-Black", "Open Sans", sans-serif;
   font-weight: 900;
   text-align: left;
+  letter-spacing: -0.1px;
 }
 
 .header-intro {
   margin: 0;
-  margin-top: 28px;
+  margin-top: 27px;
   font-size: 18px;
   line-height: 30px;
   font-family: "Lato-Light", "Open Sans", sans-serif;
@@ -215,6 +217,7 @@ header nav ul li a:hover {
   font-family: "Lato-Black", "Open Sans", sans-serif;
   font-weight: 900;
   text-align: left;
+  letter-spacing: -0.1px;
 }
 
 .services {
@@ -234,6 +237,7 @@ header nav ul li a:hover {
 
 .service-header {
   color: var(--darkgray);
+  margin-top: 1px;
 }
 
 .services-intro {
@@ -260,12 +264,28 @@ header nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 53px;
-  height: 53px;
-  padding-left: 2px;
-  padding-top: 2px;
+  width: 55px;
+  height: 55px;
+  margin-top: 2px;
   border: 2px solid var(--darkgray);
   border-radius: 50%;
+}
+
+.services-item-fix {
+  margin-left: 2px;
+}
+
+.img-container-fix {
+  margin-left: -1px;
+}
+
+.icon-fix {
+  margin-left: 1px;
+  margin-top: 1px;
+}
+
+.services-item:nth-child(2) .icon-fix {
+  margin-top: -1px;
 }
 
 .description-container {
@@ -288,7 +308,7 @@ header nav ul li a:hover {
 }
 
 .portfolio {
-  height: 728px;
+  height: 727px;
   padding: 68px 40px;
   background-color: var(--darkblue);
   border-bottom: 6px solid #323746;
@@ -300,7 +320,7 @@ header nav ul li a:hover {
 }
 
 .portfolio-intro {
-  margin-bottom: 9px;
+  margin-bottom: 11px;
   color: var(--graytext);
   text-align: left;
 }
@@ -316,7 +336,7 @@ header nav ul li a:hover {
 
 .tags {
   width: 300px;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
 }
 
 .tag-element {
@@ -331,8 +351,9 @@ header nav ul li a:hover {
 }
 
 .tag-element:nth-child(1) {
-  margin-right: 6px;
+  margin-right: 4px;
   margin-left: 1px;
+  padding-right: 7px;
 }
 
 .tag-element:nth-child(2) {
@@ -341,9 +362,14 @@ header nav ul li a:hover {
 }
 
 .tag-element:nth-child(3) {
-  padding-right: 5px;
+  padding-left: 5px;
   margin-left: 2px;
-  margin-right: 4px;
+  margin-right: 6px;
+}
+
+.tag-element:nth-child(4) {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .acitve-tag {
@@ -355,6 +381,7 @@ header nav ul li a:hover {
   text-decoration: underline;
   background-color: var(--whitegray);
   border-color: var(--whitegray);
+  color: var(--graytext);
 }
 
 .about {
@@ -370,7 +397,7 @@ header nav ul li a:hover {
 }
 
 .about-intro {
-  margin-bottom: 44px;
+  margin-bottom: 45px;
   color: var(--graytext);
 }
 
@@ -403,6 +430,7 @@ header nav ul li a:hover {
   margin: 0;
   margin-top: 10px;
   color: var(--graytext);
+  line-height: 21px;
 }
 
 .about-text span {
@@ -414,7 +442,7 @@ header nav ul li a:hover {
   justify-content: space-between;
   align-items: center;
   width: 152px;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .social-links-fix {
@@ -468,10 +496,19 @@ header nav ul li a:hover {
   height: 420px;
 }
 
-.form-container form input,
-.form-container form textarea {
-  width: calc(100% - 30px);
-  padding: 11px 15px 11px 15px;
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 364px;
+}
+
+.form-container form input, .form-container form textarea {
+  width: calc(100% - 29px);
+  padding: 12px 15px;
+  padding-left: 14px;
   font-size: 12px;
   border: none;
   background-color: var(--red);
@@ -495,8 +532,7 @@ header nav ul li a:hover {
   cursor: pointer;
 }
 
-.form-container form input::placeholder,
-.form-container form textarea::placeholder {
+.form-container form input::placeholder, .form-container form textarea::placeholder {
   color: var(--lightpink);
   font-size: 12px;
   font-family: "Lato-Regular";
@@ -505,8 +541,8 @@ header nav ul li a:hover {
 
 .form-container form textarea {
   resize: none;
-  padding-top: 9px;
-  height: 183px;
+  padding-top: 10px;
+  height: 180px;
 }
 
 .contact-container {
@@ -518,10 +554,9 @@ header nav ul li a:hover {
   color: var(--lightbeige);
 }
 
-.contact-text,
-.contact-link {
+.contact-text, .contact-link {
   margin: 0;
-  margin-top: 8px;
+  margin-top: 10px;
   color: var(--lightbeige);
 }
 
@@ -534,27 +569,26 @@ header nav ul li a:hover {
   flex-flow: column;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 18px;
+  margin-top: 21px;
 }
 
 .contact-link {
   text-decoration: none;
   margin: 0;
-  line-height: 21.5px;
 }
 
-.contact-link:nth-child(1) img {
-  padding-top: 6px;
-  padding-left: 3px;
-  padding-right: 11px;
+.contact-link:nth-child(2) {
+  margin-top: -1px;
 }
 
-.contact-link:nth-child(2) img {
-  padding-right: 10px;
+.contact-link img {
+  margin-top: -5px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 .contact-link:nth-child(3) img {
-  padding-right: 8px;
+  margin-top: 0;
 }
 
 footer {

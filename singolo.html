@@ -62,9 +62,9 @@
             tortor mauris condimentum nibh.
           </p>
           <div class="services-item-container">
-            <div class="services-item">
+            <div class="services-item services-item-fix">
               <div class="img-container">
-                <img src="./assets/images/pen.png" alt="Pen" />
+                <img class="icon-fix" src="./assets/images/pen.png" alt="Pen" />
               </div>
               <div class="description-container">
                 <h3 class="subheader services-subheader">Custom Design</h3>
@@ -75,8 +75,12 @@
               </div>
             </div>
             <div class="services-item">
-              <div class="img-container">
-                <img src="./assets/images/bulb.png" alt="Bulb" />
+              <div class="img-container img-container-fix">
+                <img
+                  class="icon-fix"
+                  src="./assets/images/bulb.png"
+                  alt="Bulb"
+                />
               </div>
               <div class="description-container">
                 <h3 class="subheader services-subheader">Inovative Ideas</h3>
@@ -87,8 +91,12 @@
               </div>
             </div>
             <div class="services-item">
-              <div class="img-container">
-                <img src="./assets/images/heart.png" alt="Heart" />
+              <div class="img-container img-container-fix">
+                <img
+                  class="icon-fix"
+                  src="./assets/images/heart.png"
+                  alt="Heart"
+                />
               </div>
               <div class="description-container">
                 <h3 class="subheader services-subheader">Love Is The Answer</h3>
@@ -98,9 +106,13 @@
                 </p>
               </div>
             </div>
-            <div class="services-item">
+            <div class="services-item services-item-fix">
               <div class="img-container">
-                <img src="./assets/images/phone.png" alt="Phone" />
+                <img
+                  class="icon-fix"
+                  src="./assets/images/phone.png"
+                  alt="Phone"
+                />
               </div>
               <div class="description-container">
                 <h3 class="subheader services-subheader">Responsive Layout</h3>
@@ -111,8 +123,12 @@
               </div>
             </div>
             <div class="services-item">
-              <div class="img-container">
-                <img src="./assets/images/bubble.png" alt="Bubble" />
+              <div class="img-container img-container-fix">
+                <img
+                  class="icon-fix"
+                  src="./assets/images/bubble.png"
+                  alt="Bubble"
+                />
               </div>
               <div class="description-container">
                 <h3 class="subheader services-subheader">24 / 7 Support</h3>
@@ -123,8 +139,12 @@
               </div>
             </div>
             <div class="services-item">
-              <div class="img-container">
-                <img src="./assets/images/star.png" alt="Star" />
+              <div class="img-container img-container-fix">
+                <img
+                  class="icon-fix"
+                  src="./assets/images/star.png"
+                  alt="Star"
+                />
               </div>
               <div class="description-container">
                 <h3 class="subheader services-subheader">Feel Like A Star</h3>
@@ -324,35 +344,37 @@
           </p>
           <div class="form-container regular-text">
             <form method="POST" action="#">
-              <input
-                type="text"
-                id="first_name_field"
-                maxlength="32"
-                name="first_name"
-                pattern="[A-Za-z]{1,32}"
-                placeholder="Name (Required)"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                id="email_field"
-                placeholder="Email (Required)"
-                required
-              />
-              <input
-                type="text"
-                name="subject"
-                id="subject_field"
-                placeholder="Subject"
-              />
-              <textarea
-                name="description"
-                id="description_field"
-                rows="10"
-                cols="30"
-                placeholder="Describe your project in detail..."
-              ></textarea>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="first_name_field"
+                  maxlength="32"
+                  name="first_name"
+                  pattern="[A-Za-z]{1,32}"
+                  placeholder="Name (Required)"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  id="email_field"
+                  placeholder="Email (Required)"
+                  required
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject_field"
+                  placeholder="Subject"
+                />
+                <textarea
+                  name="description"
+                  id="description_field"
+                  rows="10"
+                  cols="30"
+                  placeholder="Describe your project in detail..."
+                ></textarea>
+              </div>
               <button type="submit" value="">Submit</button>
             </form>
             <div class="contact-container">
