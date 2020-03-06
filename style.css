@@ -608,8 +608,7 @@ header nav ul li a:hover {
   height: 364px;
 }
 
-.form-container form input,
-.form-container form textarea {
+.form-container form input, .form-container form textarea {
   width: calc(100% - 29px);
   padding: 12px 15px;
   padding-left: 14px;
@@ -636,36 +635,36 @@ header nav ul li a:hover {
   cursor: pointer;
 }
 
-.form-container form input::-webkit-input-placeholder,
-.form-container form textarea::-webkit-input-placeholder {
+.form-container form input::-webkit-input-placeholder, .form-container form textarea::-webkit-input-placeholder {
   color: var(--lightpink);
   font-size: 12px;
   font-family: "Lato-Regular";
   font-weight: 400;
 }
 
-.form-container form input:-ms-input-placeholder,
-.form-container form textarea:-ms-input-placeholder {
+.form-container form input:-ms-input-placeholder, .form-container form textarea:-ms-input-placeholder {
   color: var(--lightpink);
   font-size: 12px;
   font-family: "Lato-Regular";
   font-weight: 400;
 }
 
-.form-container form input::-ms-input-placeholder,
-.form-container form textarea::-ms-input-placeholder {
+.form-container form input::-ms-input-placeholder, .form-container form textarea::-ms-input-placeholder {
   color: var(--lightpink);
   font-size: 12px;
   font-family: "Lato-Regular";
   font-weight: 400;
 }
 
-.form-container form input::placeholder,
-.form-container form textarea::placeholder {
+.form-container form input::placeholder, .form-container form textarea::placeholder {
   color: var(--lightpink);
   font-size: 12px;
   font-family: "Lato-Regular";
   font-weight: 400;
+}
+
+.form-container form input:invalid {
+  outline-color: red;
 }
 
 .form-container form textarea {
@@ -683,8 +682,7 @@ header nav ul li a:hover {
   color: var(--lightbeige);
 }
 
-.contact-text,
-.contact-link {
+.contact-text, .contact-link {
   margin: 0;
   margin-top: 10px;
   color: var(--lightbeige);
