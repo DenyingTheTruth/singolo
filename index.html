@@ -15,44 +15,50 @@
       </h1>
       <nav>
         <ul>
-          <li class="active">
-            <a href="#!">Home</a>
+          <li>
+            <a href="#" class="active">Home</a>
           </li>
           <li class="decoration-dot">·</li>
           <li>
-            <a href="#!">Services</a>
+            <a href="#services">Services</a>
           </li>
           <li class="decoration-dot">·</li>
           <li>
-            <a href="#!">Portfolio</a>
+            <a href="#portfolio">Portfolio</a>
           </li>
           <li class="decoration-dot">·</li>
           <li>
-            <a href="#!">About</a>
+            <a href="#about">About</a>
           </li>
           <li class="decoration-dot">·</li>
           <li>
-            <a href="#!">Contact</a>
+            <a href="#contacts">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="slider">
+      <div class="section slider">
         <i class="arrow arrow-left"></i>
-        <div class="slider-images-container">
-          <img
-            src="./assets/images/iphone-vertical.png"
-            alt="IPhone Vertical"
-          />
-          <img
-            src="./assets/images/iphone-horizontal.png"
-            alt="IPhone Horizontal"
-          />
+        <div class="slides-wrapper">
+          <div class="slides">
+            <div class="slide">
+              <img src="./assets/images/slider/slider-1.png" alt="Slider 1" />
+              <div class="black-screen b-screen-1"></div>
+              <div class="home-btn h-btn-1"></div>
+              <div class="black-screen b-screen-2"></div>
+              <div class="home-btn h-btn-2"></div>
+            </div>
+            <div class="slide">
+              <img src="./assets/images/slider/slider-2.png" alt="Slider 2" />
+              <div class="black-screen b-screen-3"></div>
+              <div class="home-btn h-btn-3"></div>
+            </div>
+          </div>
         </div>
         <i class="arrow arrow-right"></i>
       </div>
-      <section class="services">
+      <section id="services" class="section services">
         <div class="services-container">
           <h2 class="header-container service-header">Our Services</h2>
           <p class="header-intro services-intro">
@@ -157,7 +163,7 @@
           </div>
         </div>
       </section>
-      <section class="portfolio">
+      <section id="portfolio" class="section portfolio">
         <div class="portfolio-container">
           <h2 class="header-container portfolio-header">Portfolio</h2>
           <p class="header-intro portfolio-intro">
@@ -165,10 +171,10 @@
             eget lacinia odio sem nec elit.
           </p>
           <div class="tags">
-            <a class="regular-text tag-element acitve-tag" href="#!">All</a>
-            <a class="regular-text tag-element" href="#!">Web Design</a>
-            <a class="regular-text tag-element" href="#!">Graphic Design</a>
-            <a class="regular-text tag-element" href="#!">Artwork</a>
+            <a class="regular-text tag-element active-tag">All</a>
+            <a class="regular-text tag-element">Web Design</a>
+            <a class="regular-text tag-element">Graphic Design</a>
+            <a class="regular-text tag-element">Artwork</a>
           </div>
           <div class="portfolio-grid-container">
             <div class="portfolio-grid-element">
@@ -246,7 +252,7 @@
           </div>
         </div>
       </section>
-      <div class="about">
+      <section id="about" class="section about">
         <div class="about-container">
           <h2 class="header-container about-header">About Us</h2>
           <p class="header-intro about-intro">
@@ -332,8 +338,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <section class="get-a-quote">
+      </section>
+      <section id="contacts" class="section get-a-quote">
         <div class="get-a-quote-container">
           <h2 class="header-container quote-header">Get a Quote</h2>
           <p class="header-intro quote-intro">
@@ -373,10 +379,11 @@
                   id="description_field"
                   rows="10"
                   cols="30"
+                  maxlength="800"
                   placeholder="Describe your project in detail..."
                 ></textarea>
               </div>
-              <button type="submit" value="">Submit</button>
+              <button type="submit" id="quote-submit" value="">Submit</button>
             </form>
             <div class="contact-container">
               <h3 class="subheader contact-subheader">Contact Information</h3>
@@ -433,5 +440,15 @@
         </div>
       </div>
     </footer>
+
+    <div class="false_submit_result">
+      <div class="submit-result-container">
+        <p>Письмо отправлено</p>
+        <p class="submit-result-subject"></p>
+        <p class="submit-result-description"></p>
+        <button id="close_submit_result">OK</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>
