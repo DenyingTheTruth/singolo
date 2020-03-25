@@ -191,12 +191,16 @@ function setActiveTab(e) {
 
 function setActiveImg(e) {
   if (e.target.tagName === "IMG") {
-    let links = document.querySelectorAll(".portfolio-container img");
-    links.forEach(el =>
-      el === e.target
-        ? el.classList.add("active-img")
-        : el.classList.remove("active-img")
-    );
+    if (e.target.classList.contains("active-img")) {
+      e.target.classList.remove("active-img");
+    } else {
+      let links = document.querySelectorAll(".portfolio-container img");
+      links.forEach(el =>
+        el === e.target
+          ? el.classList.add("active-img")
+          : el.classList.remove("active-img")
+      );
+    }
   }
 }
 
