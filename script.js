@@ -91,6 +91,21 @@ function initSlider() {
   sliderItems.insertBefore(cloneLast, firstSlide);
 }
 
+function initBlackScreen() {
+  // black screens
+  let screens = document.querySelectorAll(".black-screen");
+
+  document.querySelector(".h-btn-1").addEventListener("click", () => {
+    screens[0].classList.toggle("active-screen");
+  });
+  document.querySelector(".h-btn-2").addEventListener("click", () => {
+    screens[1].classList.toggle("active-screen");
+  });
+  document.querySelector(".h-btn-3").addEventListener("click", () => {
+    screens[2].classList.toggle("active-screen");
+  });
+}
+
 function checkIndex() {
   let slideSize = sliderItems.querySelector(".slide").offsetWidth;
   sliderItems.classList.remove("shifting");
@@ -133,15 +148,14 @@ document.querySelector(".slides").addEventListener("transitionend", checkIndex);
 
 document.querySelector(".arrow-left").addEventListener("click", () => {
   shiftSlide(-1);
-  console.log("left");
 });
 document.querySelector(".arrow-right").addEventListener("click", () => {
   shiftSlide(1);
-  console.log("right");
 });
 
 // first slider init
 initSlider();
+initBlackScreen();
 
 // re-init slider to change orientation or viewport size
 window.addEventListener("resize", () => {
@@ -151,19 +165,7 @@ window.addEventListener("resize", () => {
   initSlider();
   document.querySelector(".slides-wrapper .slides").style.left = "-100%";
   index = 0;
-});
-
-// black screens
-let screens = document.querySelectorAll(".black-screen");
-
-document.querySelector(".h-btn-1").addEventListener("click", () => {
-  screens[0].classList.toggle("active-screen");
-});
-document.querySelector(".h-btn-2").addEventListener("click", () => {
-  screens[1].classList.toggle("active-screen");
-});
-document.querySelector(".h-btn-3").addEventListener("click", () => {
-  screens[2].classList.toggle("active-screen");
+  initBlackScreen();
 });
 
 //* PORTFOLIO *
