@@ -123,22 +123,23 @@ header nav ul li a:hover {
   display: none;
 }
 
-#menu_toggle:checked~.menu_btn {
+#menu_toggle:checked ~ .menu_btn {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
-#menu_toggle:checked~h1 {
+#menu_toggle:checked ~ h1 {
   transform: translateX(-45%);
 }
 
 @media (max-width: 347px) {
-  #menu_toggle:checked~h1 {
+  #menu_toggle:checked ~ h1 {
     transform: translateX(-35%);
   }
 }
 
-#menu_toggle:checked~nav, #menu_toggle:checked~nav ul {
+#menu_toggle:checked ~ nav,
+#menu_toggle:checked ~ nav ul {
   transform: translateX(0);
   opacity: 1;
 }
@@ -304,8 +305,6 @@ header nav ul li a:hover {
 
 .black-screen {
   position: absolute;
-  /* width: 333px;
-  height: 189px; */
   width: 32.7%;
   height: 31.7%;
   background-color: black;
@@ -316,35 +315,26 @@ header nav ul li a:hover {
 }
 
 .b-screen-1 {
-  /* top: 191px;
-  left: 54px; */
-  top: 32.2%;
+  top: 31.9%;
   left: 5.2%;
   transform: rotate(90deg);
 }
 
 .b-screen-2 {
-  top: 32.2%;
+  top: 31.9%;
   left: 47.5%;
-  /* left: 485px; */
 }
 
 .b-screen-3 {
-  /* width: 355px;
-  height: 200px; */
   width: 34.7%;
   height: 33.7%;
-  /* top: 189px;
-  left: 320px; */
-  top: 31.8%;
+  top: 31.4%;
   left: 31.5%;
   transform: rotate(90deg);
 }
 
 .home-btn {
   position: absolute;
-  /* width: 45px;
-  height: 45px; */
   width: 4%;
   height: 6.8%;
   border-radius: 50%;
@@ -353,22 +343,16 @@ header nav ul li a:hover {
 }
 
 .h-btn-1 {
-  /* top: 460px;
-  left: 198px; */
   top: 77.3%;
   left: 19.62%;
 }
 
 .h-btn-2 {
-  /* top: 263px;
-  left: 432px; */
   top: 44.25%;
   left: 42.6%;
 }
 
 .h-btn-3 {
-  /* top: 476px;
-  left: 475px; */
   width: 4.2%;
   height: 7.2%;
   top: 79.7%;
@@ -731,7 +715,7 @@ header nav ul li a:hover {
   max-width: 300px;
 }
 
-.about-grid-element>img {
+.about-grid-element > img {
   width: 100%;
 }
 
@@ -866,7 +850,8 @@ header nav ul li a:hover {
   height: 364px;
 }
 
-.form-container form input, .form-container form textarea {
+.form-container form input,
+.form-container form textarea {
   width: calc(100% - 29px);
   padding: 12px 15px;
   padding-left: 14px;
@@ -893,28 +878,32 @@ header nav ul li a:hover {
   color: var(--yellow);
 }
 
-.form-container form input::-webkit-input-placeholder, .form-container form textarea::-webkit-input-placeholder {
+.form-container form input::-webkit-input-placeholder,
+.form-container form textarea::-webkit-input-placeholder {
   color: var(--lightpink);
   font-size: 12px;
   font-family: "Lato-Regular";
   font-weight: 400;
 }
 
-.form-container form input:-ms-input-placeholder, .form-container form textarea:-ms-input-placeholder {
+.form-container form input:-ms-input-placeholder,
+.form-container form textarea:-ms-input-placeholder {
   color: var(--lightpink);
   font-size: 12px;
   font-family: "Lato-Regular";
   font-weight: 400;
 }
 
-.form-container form input::-ms-input-placeholder, .form-container form textarea::-ms-input-placeholder {
+.form-container form input::-ms-input-placeholder,
+.form-container form textarea::-ms-input-placeholder {
   color: var(--lightpink);
   font-size: 12px;
   font-family: "Lato-Regular";
   font-weight: 400;
 }
 
-.form-container form input::placeholder, .form-container form textarea::placeholder {
+.form-container form input::placeholder,
+.form-container form textarea::placeholder {
   color: var(--lightpink);
   font-size: 12px;
   font-family: "Lato-Regular";
@@ -942,7 +931,8 @@ header nav ul li a:hover {
   color: var(--lightbeige);
 }
 
-.contact-text, .contact-link {
+.contact-text,
+.contact-link {
   margin: 0;
   margin-top: 10px;
   color: var(--lightbeige);
@@ -1130,13 +1120,18 @@ footer .social-links {
   .section {
     scroll-margin-top: 65px;
   }
-  .services, .services-container, .services-item-container {
+  .services,
+  .services-container,
+  .services-item-container {
     height: auto;
   }
   .services {
     padding: 40px 0;
   }
-  .services-container, .portfolio, .about, .get-a-quote {
+  .services-container,
+  .portfolio,
+  .about,
+  .get-a-quote {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -1154,6 +1149,19 @@ footer .social-links {
   .arrow-right {
     right: 10px;
   }
+
+  .b-screen-1 {
+    top: 31%;
+  }
+
+  .b-screen-2 {
+    top: 31%;
+  }
+
+  .b-screen-3 {
+    top: 30.67%;
+  }
+
   .portfolio-grid-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
