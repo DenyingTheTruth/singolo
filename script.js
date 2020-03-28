@@ -3,27 +3,25 @@
 //* HEADER *
 const menu = document.getElementById("menu_toggle");
 
-if (document.documentElement.getBoundingClientRect().width <= 768) {
-  menu.addEventListener("change", () => {
-    if (menu.checked) {
-      document.querySelector("body").classList.add("prevent-scroll");
-    } else {
-      document.querySelector("body").classList.remove("prevent-scroll");
-    }
-  });
-  document.querySelector("header nav").addEventListener("click", () => {
+menu.addEventListener("change", () => {
+  if (menu.checked) {
+    document.querySelector("body").classList.add("prevent-scroll");
+  } else {
+    document.querySelector("body").classList.remove("prevent-scroll");
+  }
+});
+document.querySelector("header nav").addEventListener("click", () => {
+  document.getElementById("menu_toggle").checked = false;
+  document.querySelector("body").classList.remove("prevent-scroll");
+});
+document.querySelector("header nav ul").addEventListener("click", e => {
+  if (e.target.tagName === "A") {
     document.getElementById("menu_toggle").checked = false;
     document.querySelector("body").classList.remove("prevent-scroll");
-  });
-  document.querySelector("header nav ul").addEventListener("click", e => {
-    if (e.target.tagName === "A") {
-      document.getElementById("menu_toggle").checked = false;
-      document.querySelector("body").classList.remove("prevent-scroll");
-    } else {
-      e.stopPropagation();
-    }
-  });
-}
+  } else {
+    e.stopPropagation();
+  }
+});
 
 document.addEventListener("scroll", () => {
   let curPos = window.scrollY;
@@ -178,15 +176,15 @@ document
 
 function setActiveTab(e) {
   let links = document.querySelectorAll(".tags .tag-element"),
-    imgCollection = document.querySelectorAll(".portfolio-grid-element");
+    imgCollection = document.querySelector(".portfolio-grid-container");
   links.forEach(el =>
     el === e.target
       ? el.classList.add("active-tag")
       : el.classList.remove("active-tag")
   );
-  imgCollection.forEach((el, i, arr) => {
-    el.style.order = (Math.random() * (arr.length - i)) | 0;
-  });
+  for (let i = imgCollection.children.length; i >= 0; i--) {
+    imgCollection.appendChild(imgCollection.children[(Math.random() * i) | 0]);
+  }
 }
 
 function setActiveImg(e) {
