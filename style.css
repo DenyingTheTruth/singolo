@@ -123,22 +123,23 @@ header nav ul li a:hover {
   display: none;
 }
 
-#menu_toggle:checked~.menu_btn {
+#menu_toggle:checked ~ .menu_btn {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
-#menu_toggle:checked~h1 {
+#menu_toggle:checked ~ h1 {
   transform: translateX(-45%);
 }
 
 @media (max-width: 347px) {
-  #menu_toggle:checked~h1 {
+  #menu_toggle:checked ~ h1 {
     transform: translateX(-35%);
   }
 }
 
-#menu_toggle:checked~nav, #menu_toggle:checked~nav ul {
+#menu_toggle:checked ~ nav,
+#menu_toggle:checked ~ nav ul {
   transform: translateX(0);
   opacity: 1;
 }
@@ -707,7 +708,7 @@ header nav ul li a:hover {
   max-width: 300px;
 }
 
-.about-grid-element>img {
+.about-grid-element > img {
   width: 100%;
 }
 
@@ -842,7 +843,8 @@ header nav ul li a:hover {
   height: 364px;
 }
 
-.form-container form input, .form-container form textarea {
+.form-container form input,
+.form-container form textarea {
   width: calc(100% - 29px);
   padding: 12px 15px;
   padding-left: 14px;
@@ -869,28 +871,32 @@ header nav ul li a:hover {
   color: var(--yellow);
 }
 
-.form-container form input::-webkit-input-placeholder, .form-container form textarea::-webkit-input-placeholder {
+.form-container form input::-webkit-input-placeholder,
+.form-container form textarea::-webkit-input-placeholder {
   color: var(--lightpink);
   font-size: 12px;
   font-family: "Lato-Regular";
   font-weight: 400;
 }
 
-.form-container form input:-ms-input-placeholder, .form-container form textarea:-ms-input-placeholder {
+.form-container form input:-ms-input-placeholder,
+.form-container form textarea:-ms-input-placeholder {
   color: var(--lightpink);
   font-size: 12px;
   font-family: "Lato-Regular";
   font-weight: 400;
 }
 
-.form-container form input::-ms-input-placeholder, .form-container form textarea::-ms-input-placeholder {
+.form-container form input::-ms-input-placeholder,
+.form-container form textarea::-ms-input-placeholder {
   color: var(--lightpink);
   font-size: 12px;
   font-family: "Lato-Regular";
   font-weight: 400;
 }
 
-.form-container form input::placeholder, .form-container form textarea::placeholder {
+.form-container form input::placeholder,
+.form-container form textarea::placeholder {
   color: var(--lightpink);
   font-size: 12px;
   font-family: "Lato-Regular";
@@ -918,7 +924,8 @@ header nav ul li a:hover {
   color: var(--lightbeige);
 }
 
-.contact-text, .contact-link {
+.contact-text,
+.contact-link {
   margin: 0;
   margin-top: 10px;
   color: var(--lightbeige);
@@ -1116,16 +1123,23 @@ footer .social-links {
   .section {
     scroll-margin-top: 65px;
   }
-  .services, .services-container, .services-item-container {
+  .services,
+  .services-container,
+  .services-item-container {
     height: auto;
   }
-  .services, .portfolio, .about {
+  .services,
+  .portfolio,
+  .about {
     padding: 40px 0;
   }
   .services-container {
     padding: 0;
   }
-  .services-container, .portfolio, .about, .get-a-quote {
+  .services-container,
+  .portfolio,
+  .about,
+  .get-a-quote {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -1226,5 +1240,12 @@ footer .social-links {
     margin-top: 30px;
     width: 100%;
     max-width: unset;
+  }
+}
+
+@media (max-width: 374px) {
+  .portfolio-grid-container {
+    grid-template-rows: repeat(4, 1fr);
+    width: auto;
   }
 }
